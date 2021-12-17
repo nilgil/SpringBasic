@@ -1,7 +1,5 @@
 package com.hello.core.member;
 
-import org.springframework.stereotype.Service;
-
 public class MemberServiceImpl implements MemberService {
     private MemberRepository memberRepository;
 
@@ -17,5 +15,9 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public Member findMember(Long memberId) {
         return memberRepository.findById(memberId);
+    }
+
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
     }
 }
